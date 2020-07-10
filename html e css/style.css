@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border-bottom: solid #D8D8D8 0.5px;
+    box-shadow: 0px -8px 15px 0px rgb(87, 87, 87);
+    background-color: white;
+}
+
+#nome{
+    font-family: 'Gaegu', sans-serif;
+    font-size: 2em;
+    padding-top: 26px;
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+#menu{
+    width: 100%;
+    padding: 0;
+}
+
+#menu li{
+    display: inline-block;
+    width: 19%;
+    text-align: center;
+    font-family: 'Raleway';
+    font-size: 1em;
+}
+
+#menu li a{
+    text-decoration: none;
+    padding: 10px;
+    color:rgb(41, 40, 40);
+}
+
+#menu li a:hover{
+    color: rgb(80, 124, 195);
+    transition: 0.25s ease-in;
+}
+
+#imagem {
+    object-fit: cover;
+    height: 550px;
+    width: 100%;
+    padding:120px 0px 0px;  
+}
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 100vw;
+    padding: 30px 40px;
+}
+
+section h1{
+    width: 100%;
+    margin-bottom: 50px;
+    font-family: "Bebas Neue";
+    font-size: 2em;
+    letter-spacing: 7px;
+    padding-left: 15px;
+    border-bottom: 1px solid black;
+}
+
+#quadroAvisos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    justify-self: center;
+}
+
+#avisos div div{
+    text-align: justify;
+    border: solid gray 1px;
+    padding: 20px;
+}
+
+ol{
+    padding-inline-start: 20px;
+}
+ol li{
+    margin-bottom: 10px;
+    line-height: 23px;
+}
+p{
+    line-height: 23px;
+}
+
+
+
+/*Modelo de Postagem*/
+
+.ladoLado {
+    display: inline-block;
+    width: 50%;
+}
+
+input {
+    padding: 0 3px;
+}
+
+#modelos div textarea {
+    padding: 5px;
+    font-family: 'Raleway';
+}
+
+.formLinha1 {
+    width: 90%;
+    padding-bottom: 8px;
+}
+
+.formLinha2 {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 8px;
+    justify-self: center;
+    padding-bottom: 8px;
+}
+
+#traducao{
+    width: 90%;
+}
+
+.botao {
+    width: 170px;
+    margin: 15px 8px;
+    display: block;
+    border: 1px solid gray;
+    cursor:pointer;
+    padding:6px 10px;
+    text-align: center;
+    background-color: whitesmoke;
+}
+#botaoDiv {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+}
+
+#enviar:hover {
+    color: rgb(218, 78, 99);
+    border: 1px solid rgb(207, 123, 136);
+    transition: 0.2s ease-in;
+}
+#limpar:hover {
+    color: rgb(78, 132, 218);
+    border: 1px solid rgb(123, 124, 207);
+    transition: 0.2s ease-in;
+}
+
+.none {
+    display: none;
+}
+
+#resultado {
+    border: solid 1px gray;
+    padding: 10px;
+
+}
+
+#agendaGoogle {
+    margin: 30px auto 0px auto;
+}
+#agendaGoogleMobile {
+    display: none;
+}
+#agendaGoogleTablet {
+    display: none;
+}
+#agendaGoogleMeio {
+    display: none;
+}
+
+
+@media (max-width: 480px){
+    header {
+        box-shadow: none;
+    }
+    #menu li {
+        font-size: 0.9em;
+    }
+    #imagem {
+        object-fit: cover;
+        height: 350px;
+    }
+    #quadroAvisos{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .ladoLado {
+        display: inline-block;
+        width: 100%;
+    }
+    .formLinha1, .formLinha2{
+        margin: 0 auto;
+        width: 100%;
+        display: block;
+        padding-bottom: 0;        
+    }
+    #botaoDiv {
+        width: 100%;
+        display: inline-block;
+    }
+    #limpar{
+        margin: 10px auto 0px auto;
+    }
+    #enviar{
+        margin: 15px auto 0px auto;
+    }
+    input, select{
+        display: block;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    #traducao{
+        width: 100%;
+    }
+
+    #agendaGoogle {
+        display: none;
+    }
+    #agendaGoogleTablet {
+        display: none;
+    }
+    #agendaGoogleMobile {
+        display: flex;
+        margin: 30px auto 0px auto;
+    }
+    #agendaGoogleMeio {
+        display: none;
+    }
+    
+}
+
+@media (min-width: 481px) and (max-width: 767px){
+    #agendaGoogle {
+        display: none;
+    }
+    #agendaGoogleMobile {
+        display: none;
+    }
+    #agendaGoogleTablet {
+        display: none;
+    }
+    #agendaGoogleMeio {
+        display: flex;
+        margin: 30px auto 0px auto;
+    }
+    #menu li {
+        font-size: 1em;
+    }
+    .ladoLado {
+        display: inline-block;
+        width: 100%;
+    }
+    #botaoDiv {
+        width: 100%;
+        display: inline-block;
+    }
+    #limpar{
+        margin: 10px auto 0px auto;
+    }
+    #enviar{
+        margin: 15px auto 0px auto;
+    }
+    .formLinha1, .formLinha2{
+        margin: 0 auto;
+        width: 100%;
+        display: block;
+        padding-bottom: 0;        
+    }
+    input, select{
+        display: block;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    #traducao{
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    #agendaGoogle {
+        display: none;
+    }
+    #agendaGoogleMobile {
+        display: none;
+    }
+    #agendaGoogleTablet {
+        display: flex;
+        margin: 30px auto 0px auto;
+    }
+    #agendaGoogleMeio {
+        display: none;
+    }
+    #menu li {
+        font-size: 1em;
+    }
+}

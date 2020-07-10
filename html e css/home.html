@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hey SM17E! - Seventeen BR</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 id="nome">Hey SM17E!</h1>
+            <ul id="menu">
+                <li><a href="home.html" id="menuCor" style="color:rgb(218, 78, 99);">Home</a></li>
+                <li id="atualizacoes"><a href="atualizacoes.html">Atualização</a></li>
+                <li><a href="fansub.html">Fansub</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="ideias.html">Ideias</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <img id="imagem" src="https://vignette.wikia.nocookie.net/girlgroup/images/c/ca/SEVENTEEN_Henggar%C3%A6_group_promo_photo.jpg/revision/latest?cb=20200619085556" alt="Jane Doe"> 
+        <section id="avisos">
+            <h1>Avisos</h1>
+            <div id="quadroAvisos">
+                <div>
+                    <h2>Programa de modelos</h2>
+                    <ol>
+                        <li>Selecione e preencha todos os campos necessários (se não precisar do campo, deixe em branco e apague na hora de postar);</li>
+                        <li>Clique em "Colocar no modelo";</li>
+                        <li>Clique no quadrado onde o texto no modelo foi gerado, isso irá copiar o texto formatado;</li>
+                        <li>Poste!</li>
+                    </ol>
+                </div>
+                <div>
+                    <h2> Aviso 2 </h2>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, tempore? Ad omnis ut dolore, nemo quasi facere enim maiores consequuntur? Maiores iure earum animi provident, dicta asperiores reiciendis iste accusamus.</p>
+                </div>
+                <div>
+                    <h2> Aviso 3 </h2>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, tempore? Ad omnis ut dolore, nemo quasi facere enim maiores consequuntur? Maiores iure earum animi provident, dicta asperiores reiciendis iste accusamus.</p>
+                </div>
+                <div>
+                    <h2> Aviso 4 </h2>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, tempore? Ad omnis ut dolore, nemo quasi facere enim maiores consequuntur? Maiores iure earum animi provident, dicta asperiores reiciendis iste accusamus.</p>
+                </div>
+                <div>
+                    <h2> Aviso 5 </h2>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, tempore? Ad omnis ut dolore, nemo quasi facere enim maiores consequuntur? Maiores iure earum animi provident, dicta asperiores reiciendis iste accusamus.</p>
+                </div>
+            </div>
+            
+        </section>
+        <section id="modelos">
+            <h1>Modelos de Postagem</h1>
+            <div class="ladoLado">
+                <div class="formLinha1">
+                    <select id="doQueSeTrata" style="width:100%; height: 25px;" onChange="exibe();limparTag()">
+                        <option value="" disabled selected>Sobre o que você vai postar?</option>
+                        <option value="twitter">Twitter</option>
+                        <option value="twitterJP">Twitter Japonês</option>
+                        <option value="instagramSVT">Instagram SVT</option>
+                        <option value="instagram">Instagram Membros</option>
+                        <option value="weverse">Weverse</option>
+                        <option value="weiboSVT">Weibo SVT - Atualização</option>
+                        <option value="weibo">Weibo Membros - Atualização</option>
+                        <option value="weiboCom">Weibo Membros- Respondendo Comentários</option>
+                        <option value="fansub">Fansub</option>
+                        <option value="#17NEWS">Notícia Oficial</option>
+                        <option value="tradSNS">Tradução de outros SNS (que não são do SVT)</option>                
+                        <option value="trad">Tradução de outra coisa</option>
+                        <option value="info">Info</option>
+                    </select>
+                </div>
+                <div class="formLinha1">
+                    <input type="text" name="tituloVideo" id="tituloVideo" class="none" placeholder="Título do vídeo em português" style="width:100%; height: 25px;">
+                </div>
+                <div class="formLinha2">
+                    <select id= "tag" class="none" style="height: 25px;" onChange="exibeTag()" onclick="limparTag()">
+                        <option value="" disabled selected>Tem coisa escrita?</option>
+                        <option value="#TRAD">Tem coisa escrita</option>
+                        <option value="#FOTO">Só foto</option>
+                        <option value="#VÍDEO">Só vídeo</option>
+                    </select>
+                    <select id= "quem" class="none" style="height: 25px;">
+                        <option value="#SCOUPS">S.Coups</option>
+                        <option value="#JEONGHAN">Jeonghan</option>
+                        <option value="#JOSHUA">Joshua</option>
+                        <option value="#JUN">Jun</option>
+                        <option value="#HOHSI">Hoshi</option>
+                        <option value="#WONWOO">Wonwoo</option>
+                        <option value="#WOOZI">Woozi</option>
+                        <option value="#THE8">The8</option>
+                        <option value="#MINGYU">Mingyu</option>
+                        <option value="#DK">DK</option>
+                        <option value="#SEUNGKWAN">Seungkwan</option>
+                        <option value="#VERNON">Vernon</option>
+                        <option value="#DINO">Dino</option>
+                    </select>
+                    <input type="text" name="quemText" id="quemText" class="none" placeholder="Quem postou?" style="height: 25px;">
+                </div>
+                <div class="formLinha2">    
+                    <input type="number" name="dia" id="dia" class="none" placeholder="Dia" style="height: 25px;">
+                    <input type="number" name="mes" id="mes" class="none" placeholder="Mês" style="height: 25px;">
+                </div>
+                <div class="formLinha2"> 
+                    <input type="text" name="quemTraduziu" id="quemTraduziu" class="none" placeholder="Créditos"style="height: 25px;">
+                    <select id="idioma" class="none" name="idioma"style="height: 25px;">
+                        <option value="" disabled selected>Você traduziu de qual idioma?</option>
+                        <option value="ing">Inglês</option>
+                        <option value="fr">Francês</option>
+                        <option value="esp">Espanhol</option>
+                    </select>
+                </div>
+                <div class="formLinha2"> 
+                    <input type="text" name="link" id="link" class="none" placeholder="Link"style="height: 25px;">
+                    <input type="text" name="via" id="via" class="none" placeholder="Via"style="height: 25px;">
+                </div>
+                <textarea name="traducao" id="traducao" style="height:200px;" placeholder="Coloque a tradução aqui"></textarea>
+            </div>
+            <div class="ladoLado" id="resultado" onclick="copiar()"style="cursor:pointer;">
+                O post no modelo irá aparecer aqui...
+            </div>
+            <div id="botaoDiv">
+                <input type="button" value="Colocar nos modelos" class="botao" id="enviar" onclick="modelo()">
+                <input type="button" value="Limpar área de tradução" class="botao none" id="limpar" onclick="limpar()">
+            </div>
+
+            
+        </section>
+        <section id="agenda">
+            <h1>Agenda</h1>
+            <div id="agendaGoogle">
+                <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FSao_Paulo&amp;src=b2hteXdvbndvb0BnbWFpbC5jb20&amp;color=%23E67C73&amp;showTitle=0" style="border-width:0" width="803" height="600" frameborder="0" scrolling="no"></iframe>
+            </div>
+            <div id="agendaGoogleMobile">
+                <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FSao_Paulo&amp;src=b2hteXdvbndvb0BnbWFpbC5jb20&amp;color=%23E67C73&amp;showTitle=0&amp;showDate=1&amp;showPrint=0&amp;showCalendars=0" style="border-width:0" width="300" height="600" frameborder="0" scrolling="no"></iframe>
+            </div>
+            <div id="agendaGoogleMeio">
+                <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FSao_Paulo&amp;src=b2hteXdvbndvb0BnbWFpbC5jb20&amp;color=%23E67C73&amp;showTitle=0&amp;showDate=1&amp;showPrint=0&amp;showCalendars=0" style="border-width:0" width="500" height="600" frameborder="0" scrolling="no"></iframe>
+            </div>
+            <div id="agendaGoogleTablet">
+                <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FSao_Paulo&amp;src=b2hteXdvbndvb0BnbWFpbC5jb20&amp;color=%23E67C73&amp;showTitle=0&amp;showDate=1&amp;showPrint=0&amp;showCalendars=0" style="border-width:0" width="690" height="600" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        var i = 0
+        function exibe(){
+            var tipo = document.getElementById("doQueSeTrata")
+            var tituloVideo = document.getElementById("tituloVideo")
+            var tag = document.getElementById("tag")
+            var dia = document.getElementById("dia")
+            var mes = document.getElementById("mes")
+            var quem = document.getElementById("quem")
+            var quemText = document.getElementById("quemText")
+            var quemTraduziu = document.getElementById("quemTraduziu")
+            var idioma = document.getElementById("idioma")
+            var link = document.getElementById("link")
+            var via = document.getElementById("via")
+
+            //Transformando o objeto em valor
+            tipo = tipo.value
+
+            if(tipo == "twitter" || tipo == "instagram" || tipo == "instagramSVT" || tipo == "weibo" || tipo == "weiboSVT" ||  tipo == "weiboCom" ||tipo == "weverse" || tipo == "twitterJP"){
+                tag.classList.remove('none')
+                tituloVideo.classList.add('none')
+                dia.classList.add('none')
+                mes.classList.add('none')
+                quem.classList.add('none')
+                quemTraduziu.classList.add('none')
+                idioma.classList.add('none')
+                link.classList.add('none')
+                via.classList.add('none')
+                quemText.classList.add('none')
+
+            }else if(tipo == "fansub"){
+                tag.classList.add('none')
+                tituloVideo.classList.remove('none')
+                dia.classList.add('none')
+                mes.classList.add('none')
+                quem.classList.add('none')
+                quemTraduziu.classList.add('none')
+                idioma.classList.add('none')
+                link.classList.remove('none')
+                via.classList.add('none')
+                quemText.classList.add('none')
+
+            }else if(tipo == "#17NEWS"){
+                tag.classList.add('none')
+                tituloVideo.classList.add('none')
+                dia.classList.remove('none')
+                mes.classList.remove('none')
+                quem.classList.add('none')
+                quemTraduziu.classList.add('none')
+                idioma.classList.add('none')
+                link.classList.add('none')
+                via.classList.add('none')
+                quemText.classList.add('none')
+
+            }else if(tipo == "trad"){
+                tag.classList.add('none')
+                tituloVideo.classList.add('none')
+                dia.classList.remove('none')
+                mes.classList.remove('none')
+                quem.classList.add('none')
+                quemTraduziu.classList.remove('none')
+                idioma.classList.remove('none')
+                link.classList.add('none')
+                via.classList.remove('none')
+                quemText.classList.add('none')
+
+            }else if(tipo == "tradSNS"){
+                tag.classList.add('none')
+                tituloVideo.classList.add('none')
+                dia.classList.remove('none')
+                mes.classList.remove('none')
+                quem.classList.add('none')
+                quemTraduziu.classList.remove('none')
+                idioma.classList.remove('none')
+                link.classList.add('none')
+                via.classList.add('none')
+                quemText.classList.remove('none')
+
+            }else{
+                tag.classList.add('none')
+                tituloVideo.classList.add('none')
+                dia.classList.remove('none')
+                mes.classList.remove('none')
+                quem.classList.add('none')
+                quemTraduziu.classList.add('none')
+                idioma.classList.add('none')
+                link.classList.remove('none')
+                via.classList.remove('none')
+                quemText.classList.add('none')
+            }
+
+            var options = tag.querySelectorAll('option');
+            if (options.length > 0) {
+            tag.value = options[0].value;
+        }
+
+        }
+        function exibeTag(){
+            var tipo = document.getElementById("doQueSeTrata")
+            var tituloVideo = document.getElementById("tituloVideo")
+            var tag = document.getElementById("tag")
+            var dia = document.getElementById("dia")
+            var mes = document.getElementById("mes")
+            var quem = document.getElementById("quem")
+            var quemText = document.getElementById("quemText")
+            var quemTraduziu = document.getElementById("quemTraduziu")
+            var idioma = document.getElementById("idioma")
+            var link = document.getElementById("link")
+            var via = document.getElementById("via")
+
+            //Transformando o objeto em valor
+            tipo = tipo.value
+            tag = tag.value
+
+            if(tag == "#TRAD" && (tipo == "instagram" || tipo == "weibo" || tipo == "weiboCom" || tipo == "weverse")){
+                tituloVideo.classList.add('none')
+                dia.classList.remove('none')
+                mes.classList.remove('none')
+                quem.classList.remove('none')
+                quemTraduziu.classList.remove('none')
+                idioma.classList.remove('none')
+                link.classList.add('none')
+                via.classList.add('none')
+                quemText.classList.add('none')
+
+            }else if(tag == "#TRAD" && (tipo == "twitter" || tipo == "twitterJP" || tipo == "instagramSVT" || tipo == "weiboSVT")){
+                tituloVideo.classList.add('none')
+                dia.classList.remove('none')
+                mes.classList.remove('none')
+                quem.classList.add('none')
+                quemTraduziu.classList.remove('none')
+                idioma.classList.remove('none')
+                link.classList.add('none')
+                via.classList.add('none')
+                quemText.classList.add('none')
+
+            }else if(tag != "#TRAD" && (tipo == "instagram" || tipo == "weibo" || tipo == "weiboCom" || tipo == "weverse")){
+                tituloVideo.classList.add('none')
+                dia.classList.remove('none')
+                mes.classList.remove('none')
+                quem.classList.remove('none')
+                quemTraduziu.classList.add('none')
+                idioma.classList.add('none')
+                link.classList.add('none')
+                via.classList.add('none')
+                quemText.classList.add('none')
+        
+            }else{
+                tituloVideo.classList.add('none')
+                dia.classList.remove('none')
+                mes.classList.remove('none')
+                quem.classList.add('none')
+                quemTraduziu.classList.add('none')
+                idioma.classList.add('none')
+                link.classList.add('none')
+                via.classList.add('none')
+                quemText.classList.add('none')
+            }
+
+        }
+
+        function modelo(){
+            var tipo = document.getElementById("doQueSeTrata")
+            var tituloVideo = document.getElementById("tituloVideo")
+            var tag = document.getElementById("tag")
+            var dia = document.getElementById("dia")
+            var mes = document.getElementById("mes")
+            var quem = document.getElementById("quem")
+            var quemText = document.getElementById("quemText")
+            var quemTraduziu = document.getElementById("quemTraduziu")
+            var idioma = document.getElementById("idioma")
+            var link = document.getElementById("link")
+            var via = document.getElementById("via")
+            var traducao = document.getElementById("traducao")
+            var resultado = document.getElementById("resultado")
+
+            //Transformando o objeto em valor
+            tipo = tipo.value
+            tituloVideo = tituloVideo.value
+            tag = tag.value
+            dia = dia.value
+            mes = mes.value
+            quem = quem.value
+            quemText = quemText.value
+            quemTraduziu = quemTraduziu.value
+            idioma = idioma.value
+            link = link.value
+            via = via.value
+            traducao = traducao.value
+            dia.toString()
+            mes.toString()
+
+            //Dia e mês com dois digitos
+            if(dia.length == 1 && mes.length == 1){
+                dia = `0${dia}`
+                mes = `0${mes}`
+            }else if(dia.length == 1){
+                dia = `0${dia}`
+            }else if(mes.length == 1){
+                mes = `0${mes}`
+            }else{
+            }
+
+            //Colocando no modelo
+            if(tipo == "twitter"){
+                if(tag == "#TRAD"){
+                    resultado.innerHTML = `[${tag}] ${dia}.${mes}.20 - Atualização do Twitter do #SEVENTEEN @pledis_17<br><br>${traducao}<br>_<br>Trad. ${idioma}: ${quemTraduziu}<br>Trad. pt/br: Hey SM17E #Henggarae #헹가래 #세븐틴`
+                }else{
+                    resultado.innerHTML = `[${tag}] ${dia}.${mes}.20 - Atualização do Twitter do #SEVENTEEN @pledis_17<br><br>${traducao}<br><br>#Henggarae #헹가래 #세븐틴`
+                }
+            }
+            else if(tipo == "twitterJP"){
+                if(tag == "#TRAD"){
+                resultado.innerHTML = `[${tag}] ${dia}.${mes}.20 - Atualização do @pledis_17jp<br><br>${traducao}<br>_<br>Trad. ${idioma}: ${quemTraduziu}<br>Trad. pt/br: Hey SM17E #Henggarae #헹가래 #세븐틴 #SEVENTEEN @pledis_17`
+                }else{
+                resultado.innerHTML = `[${tag}] ${dia}.${mes}.20 - Atualização do @pledis_17jp<br><br>${traducao}<br><br>#Henggarae #헹가래 #세븐틴 #SEVENTEEN @pledis_17`
+                }
+            }
+            else if(tipo == "instagramSVT"){
+                if(tag == "#TRAD"){
+                    resultado.innerHTML = `[${tag}] ${dia}.${mes}.20 - Atualização do Instagram do #SEVENTEEN<br><br>"${traducao}"<br>_<br>Trad. ${idioma}: ${quemTraduziu}<br>Trad. pt/br: Hey SM17E #Henggarae #헹가래 #세븐틴 @pledis_17`
+                }else{
+                    resultado.innerHTML = `[${tag}] ${dia}.${mes}.20 - Atualização do Instagram do #SEVENTEEN<br><br>"${traducao}"<br><br>#Henggarae #헹가래 #세븐틴 @pledis_17`
+                }
+            }
+            else if(tipo == "instagram"){
+                if(tag == "#TRAD"){
+                    resultado.innerHTML = `[${tag}] ${dia}.${mes}.20 - Atualização do Instagram do ${quem}<br><br>"${traducao}"<br>_<br>Trad. ${idioma}: ${quemTraduziu}<br>Trad. pt/br: Hey SM17E #Henggarae #헹가래 #SEVENTEEN #세븐틴 @pledis_17`
+                }else{
+                    resultado.innerHTML = `[${tag}] ${dia}.${mes}.20 - Atualização do Instagram do ${quem}<br><br>"${traducao}"<br><br>#Henggarae #헹가래 #SEVENTEEN #세븐틴 @pledis_17`
+                }
+            }
+            else if(tipo == "weverse"){
+                if(tag == "#TRAD"){
+                    resultado.innerHTML = `[${tag}] ${dia}.${mes}.20 - ${quem} 🌟 Weverse<br><br>"${traducao}"<br>_<br>Trad. ${idioma}: ${quemTraduziu}<br>Trad. pt/br: Hey SM17E #Henggarae #헹가래 #SEVENTEEN #세븐틴 @pledis_17`
+                }else{
+                    resultado.innerHTML = `[${tag}] ${dia}.${mes}.20 - ${quem} 🌟 Weverse<br><br>"${traducao}"<br><br>#Henggarae #헹가래 #SEVENTEEN #세븐틴 @pledis_17`
+                }
+            }
+            else if(tipo == "weiboSVT"){
+                if(tag == "#TRAD"){
+                    resultado.innerHTML = `[${tag}] ${dia}.${mes}.20 - Atualização do Weibo do #SEVENTEEN<br><br>${traducao}<br>_<br>Trad. ${idioma}: ${quemTraduziu}<br>Trad. pt/br: Hey SM17E #Henggarae #헹가래 #세븐틴 @pledis_17`
+                }else{
+                    resultado.innerHTML = `[${tag}] ${dia}.${mes}.20 - Atualização do Weibo do #SEVENTEEN<br><br>${traducao}<br><br>#Henggarae #헹가래 #세븐틴 @pledis_17`
+                }
+            }
+            else if(tipo == "weibo"){
+                if(tag == "#TRAD"){
+                    resultado.innerHTML = `[${tag}] ${dia}.${mes}.20 - Atualização do Weibo do ${quem}<br><br>"${traducao}"<br>_<br>Trad. ${idioma}: ${quemTraduziu}<br>Trad. pt/br: Hey SM17E #Henggarae #헹가래 #SEVENTEEN #세븐틴 @pledis_17`
+                }else{
+                    resultado.innerHTML = `[${tag}] ${dia}.${mes}.20 - Atualização do Weibo do ${quem}<br><br>"${traducao}"<br><br>#Henggarae #헹가래 #SEVENTEEN #세븐틴 @pledis_17`
+                }
+            }
+            else if(tipo == "weiboCom"){
+                resultado.innerHTML = `[${tag}] ${dia}.${mes}.20 - Comentários do ${quem} <font color="red"><strong>em seu post</strong></font> no Weibo<br><br>"${traducao}"<br>_<br>Trad. ${idioma}: ${quemTraduziu}<br>Trad. pt/br: Hey SM17E #Henggarae #헹가래 #세븐틴 @pledis_17`
+            }
+            else if(tipo == "fansub"){
+                resultado.innerHTML = `[${tag}] ${tituloVideo} traduzido e legendado em português (PT-BR)<br><br>▶${link}`
+            }
+            else if(tipo == "#17NEWS"){
+                resultado.innerHTML = `[${tag}] ${dia}.${mes}.20 - ${traducao}<br><br>#Henggarae #헹가래 #SEVENTEEN #세븐틴 @pledis_17`
+            }
+            else if(tipo == "trad"){
+                resultado.innerHTML = `[#TRAD] ${dia}.${mes}.20 - ${traducao}<br>_<br>Trad. ${idioma}: ${quemTraduziu}<br>Trad. pt/br: Hey SM17E #Henggarae #헹가래 #SEVENTEEN #세븐틴 @pledis_17`
+            }
+            else if(tipo == "tradSNS"){
+                resultado.innerHTML = `[#TRAD] ${dia}.${mes}.20 - Atualização <font color="red"><strong>de</strong></font> ${quemText} com o #SEVENTEEN @pledis_17<br><br>${traducao}<br>_<br>Trad. ${idioma}: ${quemTraduziu}<br>Trad. pt/br: Hey SM17E #Henggarae #헹가래 #세븐틴`
+            }
+            else{
+                resultado.innerHTML = `[#INFO] ${dia}.${mes}.20 - ${traducao}<br><br>(🔗${link} / via ${via})<br>#Henggarae #헹가래 #SEVENTEEN #세븐틴 @pledis_17`
+            }
+
+            var limpar = document.getElementById("limpar")
+            limpar.classList.remove('none')
+        }
+
+        function copiar(){
+            var resultado = document.getElementById("resultado")
+            //criar um textarea
+            let inputTextArea = document.createElement("textarea");
+            //colocar como valor o innerText do resultado
+            inputTextArea.value = resultado.innerText;
+            //colocar o textarea no html
+            document.body.appendChild(inputTextArea);
+            //selecionar o texto
+            inputTextArea.select();
+            //copiar
+            document.execCommand('copy');
+            //apagar o textarea do html
+            document.body.removeChild(inputTextArea);
+
+        }
+
+        function limpar(){
+        // limpa textarea
+        var traducao = document.getElementById("traducao")
+        traducao.value = ''
+        
+        // sumir com o botão
+        var limpar = document.getElementById("limpar")
+        limpar.classList.add('none')
+        }
+
+    </script>
+
+</body>
+</html>
